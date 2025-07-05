@@ -3,7 +3,7 @@ name: Build and Push Docker Image to ACR
 on:
   push:
     branches:
-      - main
+      - main  # Change this if you're using a different branch
 
 jobs:
   build-and-push:
@@ -13,13 +13,11 @@ jobs:
       - name: ⬇️ Checkout source code
         uses: actions/checkout@v4
 
-      - name: 🔐 Azure Login
-        uses: azure/login@v2
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: 🔑 Docker login to ACR
+        run: echo "${{ secrets.ACR_PASSWORD }}" | docker login azurecontainerreg1.azurecr.io -u "${{ secrets.ACR_USERNAME }}" --password-stdin
 
       - name: 🐳 Build Docker image
         run: docker build -t azurecontainerreg1.azurecr.io/flask-app:latest .
 
-      - name: 🚀 Push Docker image
+      - name: 🚀 Push Docker image to ACR
         run: docker push azurecontainerreg1.azurecr.io/flask-app:latest
