@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChocoDelight | Premium Handmade Chocolates</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fefcfb;
+      color: #4b2e2e;
+    }
+    header {
+      background-color: #5c2e2e;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1611599539966-7d2cb9977d0d?fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3rem;
+    }
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .footer {
+      background-color: #5c2e2e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ChocoDelight</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Premium Handmade Chocolates</h2>
+      <p>Crafted with love and the finest cocoa beans</p>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>At ChocoDelight, we believe chocolate is an experience. Our handcrafted chocolates are made with ethically sourced ingredients, promising rich taste and unforgettable flavor.</p>
+  </section>
+
+  <section id="products" class="section">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1601978791922-8e3fd7cde61c?fit=crop&w=400&q=80" alt="Dark Chocolate"/>
+        <h3>Dark Cocoa Bites</h3>
+        <p>Rich, 70% dark cocoa</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606312619344-47e227b8d360?fit=crop&w=400&q=80" alt="Milk Chocolate"/>
+        <h3>Milk Silk Bars</h3>
+        <p>Creamy and smooth textures</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1589983846997-93ae64d04d40?fit=crop&w=400&q=80" alt="Assorted Chocolates"/>
+        <h3>Assorted Gift Box</h3>
+        <p>Perfect for celebrations</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: support@chocodelight.com</p>
+    <p>Phone: +91 98765 43210</p>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 ChocoDelight. All rights reserved.
+  </footer>
+
+</body>
+</html>
