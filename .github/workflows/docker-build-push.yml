@@ -3,7 +3,7 @@ name: Build and Push Docker Image to ACR
 on:
   push:
     branches:
-      - main  # Trigger this workflow on push to main
+      - main
 
 jobs:
   build-and-push:
@@ -18,15 +18,8 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: 🔑 Log in to ACR
-        uses: azure/docker-login@v1
-        with:
-          login-server: azurecontainerreg1.azurecr.io
-
       - name: 🐳 Build Docker image
-        run: |
-          docker build -t azurecontainerreg1.azurecr.io/flask-app:latest .
+        run: docker build -t azurecontainerreg1.azurecr.io/flask-app:latest .
 
-      - name: 🚀 Push Docker image to ACR
-        run: |
-          docker push azurecontainerreg1.azurecr.io/flask-app:latest
+      - name: 🚀 Push Docker image
+        run: docker push azurecontainerreg1.azurecr.io/flask-app:latest
